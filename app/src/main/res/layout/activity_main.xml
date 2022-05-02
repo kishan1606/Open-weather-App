@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".MainActivity">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#895CD8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/main_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/main_datetime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Location " />
+
+                <TextView
+                    android:id="@+id/main_datetime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/main_location"
+                    app:layout_constraintStart_toStartOf="@+id/main_location"
+                    app:layout_constraintTop_toBottomOf="@+id/main_location"
+                    tools:text="Date time" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                <TextView
+                    android:id="@+id/main_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="90sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/main_feelslike"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="72F" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/main_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/main_temperature"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@drawable/_01d" />
+
+                <TextView
+                    android:id="@+id/main_feelslike"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/main_desc"
+                    app:layout_constraintEnd_toEndOf="@+id/main_temperature"
+                    app:layout_constraintStart_toStartOf="@+id/main_temperature"
+                    app:layout_constraintTop_toBottomOf="@+id/main_temperature"
+                    tools:text="Feels like" />
+
+                <TextView
+                    android:id="@+id/main_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/main_wind"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main_feelslike"
+                    tools:text="Weather Description" />
+
+                <TextView
+                    android:id="@+id/main_wind"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/main_humidity"
+                    app:layout_constraintEnd_toEndOf="@+id/main_desc"
+                    app:layout_constraintStart_toStartOf="@+id/main_desc"
+                    app:layout_constraintTop_toBottomOf="@+id/main_desc"
+                    tools:text="Wind" />
+
+                <TextView
+                    android:id="@+id/main_humidity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/main_uvindex"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main_wind"
+                    tools:text="Humidity" />
+
+                <TextView
+                    android:id="@+id/main_uvindex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/main_mtemp"
+                    app:layout_constraintEnd_toStartOf="@+id/main_visibility"
+                    app:layout_constraintHorizontal_bias="0.351"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main_humidity"
+                    tools:text="UV index" />
+
+                <TextView
+                    android:id="@+id/main_visibility"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="8dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_uvindex"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/main_uvindex"
+                    tools:text="Visibility" />
+
+                <TextView
+                    android:id="@+id/main_mtemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/main_mtime"
+                    app:layout_constraintEnd_toStartOf="@+id/main_dtemp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/main_uvindex"
+                    tools:text="66F" />
+
+                <TextView
+                    android:id="@+id/main_dtemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_mtemp"
+                    app:layout_constraintEnd_toStartOf="@+id/main_etemp"
+                    app:layout_constraintStart_toEndOf="@+id/main_mtemp"
+                    tools:text="72F" />
+
+                <TextView
+                    android:id="@+id/main_etemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_dtemp"
+                    app:layout_constraintEnd_toStartOf="@+id/main_ntemp"
+                    app:layout_constraintStart_toEndOf="@+id/main_dtemp"
+                    tools:text="71F" />
+
+                <TextView
+                    android:id="@+id/main_ntemp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_etemp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/main_etemp"
+                    tools:text="68F" />
+
+                <TextView
+                    android:id="@+id/main_mtime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/main_mtemp"
+                    app:layout_constraintStart_toStartOf="@+id/main_mtemp"
+                    app:layout_constraintTop_toBottomOf="@+id/main_mtemp"
+                    tools:text="8AM" />
+
+                <TextView
+                    android:id="@+id/main_dtime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_mtime"
+                    app:layout_constraintEnd_toEndOf="@+id/main_dtemp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/main_dtemp"
+                    tools:text="1PM" />
+
+                <TextView
+                    android:id="@+id/main_etime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_dtime"
+                    app:layout_constraintEnd_toEndOf="@+id/main_etemp"
+                    app:layout_constraintStart_toStartOf="@+id/main_etemp"
+                    tools:text="6PM" />
+
+                <TextView
+                    android:id="@+id/main_ntime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_etime"
+                    app:layout_constraintEnd_toEndOf="@+id/main_ntemp"
+                    app:layout_constraintStart_toStartOf="@+id/main_ntemp"
+                    tools:text="11PM" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_dailyweather"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#8F486CD8"
+                    android:backgroundTint="#25FFFFFF"
+                    app:layout_constraintBottom_toTopOf="@+id/main_sunrise"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/main_sunrise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/main_sunset"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_dailyweather"
+                    tools:text="Sunrise" />
+
+                <TextView
+                    android:id="@+id/main_sunset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="8dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/main_sunrise"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/main_sunrise"
+                    tools:text="Sunset" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

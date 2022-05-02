@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/for_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#895CD8"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/for_hltemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Date" />
+
+    <TextView
+        android:id="@+id/for_hltemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/for_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/for_date"
+        tools:text="77F" />
+
+    <TextView
+        android:id="@+id/for_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/for_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/for_hltemp"
+        tools:text="broken clouds" />
+
+    <TextView
+        android:id="@+id/for_precpt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="12dp"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/for_desc"
+        app:layout_constraintStart_toStartOf="@+id/for_desc"
+        app:layout_constraintTop_toBottomOf="@+id/for_desc"
+        tools:text="0% precpt" />
+
+    <TextView
+        android:id="@+id/for_uvindex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="12dp"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/for_precpt"
+        app:layout_constraintStart_toStartOf="@+id/for_precpt"
+        app:layout_constraintTop_toBottomOf="@+id/for_precpt"
+        tools:text="uv index = 1" />
+
+    <ImageView
+        android:id="@+id/for_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/for_mtemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/for_hltemp"
+        app:layout_constraintTop_toBottomOf="@+id/for_date"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/_01d" />
+
+    <TextView
+        android:id="@+id/for_mtemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/for_dtemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/for_uvindex"
+        tools:text="65F" />
+
+    <TextView
+        android:id="@+id/for_mtime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:text="8AM"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/for_mtemp"
+        app:layout_constraintStart_toStartOf="@+id/for_mtemp"
+        app:layout_constraintTop_toBottomOf="@+id/for_mtemp" />
+
+    <TextView
+        android:id="@+id/for_dtemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/for_mtemp"
+        app:layout_constraintEnd_toStartOf="@+id/for_etemp"
+        app:layout_constraintStart_toEndOf="@+id/for_mtemp"
+        tools:text="70F" />
+
+    <TextView
+        android:id="@+id/for_etemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/for_dtemp"
+        app:layout_constraintEnd_toStartOf="@+id/for_ntemp"
+        app:layout_constraintStart_toEndOf="@+id/for_dtemp"
+        tools:text="64F" />
+
+    <TextView
+        android:id="@+id/for_ntemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/for_etemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/for_etemp"
+        tools:text="60F" />
+
+    <TextView
+        android:id="@+id/for_dtime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:text="1PM"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/for_dtemp"
+        app:layout_constraintStart_toStartOf="@+id/for_dtemp"
+        app:layout_constraintTop_toBottomOf="@+id/for_dtemp" />
+
+    <TextView
+        android:id="@+id/for_etime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:text="5PM"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/for_etemp"
+        app:layout_constraintStart_toStartOf="@+id/for_etemp"
+        app:layout_constraintTop_toBottomOf="@+id/for_etemp" />
+
+    <TextView
+        android:id="@+id/for_ntime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:text="11PM"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/for_ntemp"
+        app:layout_constraintStart_toStartOf="@+id/for_ntemp"
+        app:layout_constraintTop_toBottomOf="@+id/for_ntemp"
+        tools:text="11PM" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

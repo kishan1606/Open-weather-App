@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Open Weather</string>
+    <string name="calender">calender</string>
+    <string name="location">location</string>
+    <string name="unit">unit</string>
+    <string name="day">Day</string>
+    <string name="time">Time</string>
+    <string name="temperature">Temperature</string>
+    <string name="description">Description</string>
+    <string name="todo">TODO</string>
+    <string name="daily_forcast">Daily Forcast</string>
+</resources>
